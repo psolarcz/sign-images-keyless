@@ -44,3 +44,13 @@ dockers:
     dockerfile: Dockerfile
     image_templates:
       - "ttl.sh/{{.Env.DOCKER_TAG}}:1h"
+
+docker_signs:
+  - id: image-amd64
+    cmd: cosign
+    args:
+      - sign
+      - --yes
+      - --rekor-url
+      - https://rekor.sigstore.dev/
+      - "${artifact}"
