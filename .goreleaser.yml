@@ -39,6 +39,16 @@ changelog:
       - '^docs:'
       - '^test:'
 
+signs:
+  - cmd: cosign
+    args:
+      - sign
+      - --yes
+      - --rekor-url
+      - https://rekor.sigstore.dev/
+      - "${artifact}"
+    artifacts: all
+
 dockers:
   - id: image-amd64
     dockerfile: Dockerfile
