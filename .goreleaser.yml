@@ -42,7 +42,7 @@ changelog:
 signs:
   - cmd: cosign
     args:
-      - sign
+      - sign-blob
       - --yes
       - --rekor-url
       - https://rekor.sigstore.dev/
