@@ -54,3 +54,5 @@ docker_signs:
       - --rekor-url
       - https://rekor.sigstore.dev/
       - "${artifact}"
+    artifacts: all
+    output: true
