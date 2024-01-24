@@ -46,6 +46,7 @@ signs:
       - --yes
       - --rekor-url
       - https://rekor.sigstore.dev/
+      - "--output-signature=${signature}"
       - "${artifact}"
     artifacts: all
 
